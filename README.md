@@ -25,4 +25,4 @@ Koble Git-repositoriet til Netlify. Siden er statisk, så la byggekommandoen st�
 
 ## Kontakt og skjema
 
-Kontaktskjemaet bruker `mailto:` og åpner besøkendes e-postprogram. Det fungerer best for besøkende som har et e-postprogram konfigurert på enheten sin.
+Kontaktskjemaet sender inn via Formspree. Skjemainnsendinger går til e-postadressen som er konfigurert for Formspree-skjemaet.

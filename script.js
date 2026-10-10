@@ -21,14 +21,58 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const contactForm = document.querySelector('[data-formspree]');
 
 if (contactForm) {
+  const steps = Array.from(contactForm.querySelectorAll('.formStep'));
+  const progressItems = Array.from(contactForm.querySelectorAll('.formProgress li'));
+  const stepStatus = contactForm.querySelector('.formStepStatus');
+  const backButton = contactForm.querySelector('[data-step-back]');
+  const skipButton = contactForm.querySelector('[data-step-skip]');
+  const nextButton = contactForm.querySelector('[data-step-next]');
   const submitButton = contactForm.querySelector('.form__submit');
   const statusMessage = contactForm.querySelector('.form__status');
   const successMessage = contactForm.parentElement.querySelector('.formSuccess');
   const resetButton = successMessage.querySelector('.formSuccess__reset');
+  let currentStep = 0;
+
+  function showStep(stepIndex, moveFocus = true) {
+    currentStep = Math.max(0, Math.min(stepIndex, steps.length - 1));
+
+    steps.forEach((step, index) => {
+      step.hidden = index !== currentStep;
+      step.querySelectorAll('[data-required]').forEach((field) => {
+        field.required = index === currentStep;
+      });
+    });
+
+    progressItems.forEach((item, index) => {
+      if (index === currentStep) {
+        item.setAttribute('aria-current', 'step');
+      } else {
+        item.removeAttribute('aria-current');
+      }
+    });
+
+    stepStatus.textContent = `Steg ${currentStep + 1} av ${steps.length}`;
+    backButton.hidden = currentStep === 0;
+    skipButton.hidden = currentStep === 0 || currentStep === steps.length - 1;
+    nextButton.innerHTML = currentStep === steps.length - 1
+      ? 'Send forespørsel <span aria-hidden="true">→</span>'
+      : 'Neste <span aria-hidden="true">→</span>';
+
+    if (moveFocus) {
+      const legend = steps[currentStep].querySelector('legend');
+      legend.setAttribute('tabindex', '-1');
+      legend.focus();
+    }
+  }
 
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!contactForm.reportValidity()) return;
+
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 1);
+      return;
+    }
 
     submitButton.disabled = true;
     submitButton.textContent = 'Sender…';
@@ -56,13 +100,19 @@ if (contactForm) {
     }
   });
 
+  backButton.addEventListener('click', () => showStep(currentStep - 1));
+  skipButton.addEventListener('click', () => showStep(currentStep + 1));
+
   resetButton.addEventListener('click', () => {
     contactForm.reset();
+    showStep(0, false);
     contactForm.hidden = false;
     successMessage.hidden = true;
     contactForm.removeAttribute('aria-busy');
     submitButton.disabled = false;
-    submitButton.textContent = 'Send melding';
-    contactForm.querySelector('input[name="navn"]').focus();
+    statusMessage.hidden = true;
+    contactForm.querySelector('input[name="behov"]').focus();
   });
+
+  showStep(0, false);
 }

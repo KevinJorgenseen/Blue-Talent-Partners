@@ -277,6 +277,8 @@ details p{ margin: 10px 0 0; color: var(--muted); }
   .navToggle{ display:inline-block; }
   .steps{ grid-template-columns: 1fr; }
   .hero__veil{ background:rgba(244,241,236,.62); }
+  #tjenester{ padding-bottom:24px; }
+  #om{ padding-top:24px; }
 }
 
 @media (prefers-reduced-motion: reduce){

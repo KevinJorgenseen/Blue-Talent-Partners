@@ -25,4 +25,4 @@ Koble Git-repositoriet til Netlify. Siden er statisk, s책 la byggekommandoen st�
 
 ## Kontakt og skjema
 
-Kontaktinformasjonen og Netlify-skjemaet ligger i `index.html`. Skjemaet blir behandlet n책r siden er publisert p책 Netlify. Aktiver skjemainnsendinger for nettstedet i Netlify, og sett opp e-postvarsler for 책 f책 beskjed om nye innsendinger.
+Firestegsskjemaet ligger i `index.html` og bruker Netlify Forms. Skjemaet blir behandlet n책r siden er publisert p책 Netlify. Aktiver skjemainnsendinger for nettstedet i Netlify, og sett opp e-postvarsler for 책 f책 beskjed om nye innsendinger.

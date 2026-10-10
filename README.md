@@ -25,4 +25,4 @@ Koble Git-repositoriet til Netlify. Siden er statisk, så la byggekommandoen st�
 
 ## Kontakt og skjema
 
-Kontaktinformasjonen og skjemaet ligger i `index.html`. Skjemaet bruker foreløpig `mailto:` til `jorgensen.recruitment@gmail.com`, som åpner besøkendes e-postprogram. Når Netlify Forms er konfigurert, oppdater skjemaet der.
+Kontaktinformasjonen og Netlify-skjemaet ligger i `index.html`. Skjemaet blir behandlet når siden er publisert på Netlify. Aktiver skjemainnsendinger for nettstedet i Netlify, og sett opp e-postvarsler for å få beskjed om nye innsendinger.

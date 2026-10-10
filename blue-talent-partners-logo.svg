@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="160" viewBox="0 0 960 160" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Blue Talent Partners</title>
+  <desc id="logo-description">Blue Talent Partners, Search &amp; Recruitment for the Seafood Industry, with a white fish over flowing sea lines.</desc>
+  <g transform="translate(10 15) scale(1.8)">
+    <rect width="72" height="72" rx="12" fill="#1F2A44"/>
+    <path d="M8 38c13-12 25-12 37 0s17 12 23 4M8 50c13-12 25-12 37 0s17 12 23 4M8 62c13-12 25-12 37 0s17 12 23 4" fill="none" stroke="#8A97B9" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M28 21c7-7 17-7 24 0-7 7-17 7-24 0Zm1 0-8-6v12l8-6Z" fill="#F4F1EC"/>
+    <circle cx="46" cy="20" r="1" fill="#1F2A44"/>
+  </g>
+  <text x="170" y="76" fill="#1F2A44" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">Blue Talent Partners</text>
+  <text x="172" y="111" fill="#5F6A89" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">Search &amp; Recruitment for the Seafood Industry</text>
+</svg>

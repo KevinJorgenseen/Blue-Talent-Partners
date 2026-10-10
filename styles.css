@@ -68,6 +68,7 @@ a:hover{ text-decoration: underline; }
 .nav{ display:flex; align-items:center; gap: 18px; }
 .nav a{ font-size: 14px; color: var(--muted); font-weight: 500; }
 .nav a:hover{ color: var(--ink); text-decoration: none; }
+.nav a.btn, .nav a.btn:hover{ color:#fff; }
 
 .navToggle{
   display:none;
@@ -82,6 +83,7 @@ a:hover{ text-decoration: underline; }
 .mobileNav{ border-top:1px solid var(--line); background: rgba(255,255,255,.9); }
 .mobileNav__inner{ display:grid; gap: 10px; padding: 14px 0 18px; }
 .mobileNav a{ padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); }
+.mobileNav a.btn, .mobileNav a.btn:hover{ color:#fff; }
 
 .hero{ padding: 56px 0 28px; background: radial-gradient(circle at top left, rgba(31,42,68,.14), transparent 25%), radial-gradient(circle at top right, rgba(95,106,137,.12), transparent 20%); }
 .hero__grid{ display:grid; grid-template-columns: 1.35fr .95fr; gap: 26px; align-items: start; }
@@ -184,7 +186,7 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(95,106,137,.65); b
 .form__submit{ cursor:pointer; transition:filter .2s ease, transform .2s ease, opacity .2s ease; }
 .form__submit:hover:not(:disabled){ transform:translateY(-1px); }
 .form__submit:disabled{ cursor:wait; opacity:.72; }
-.formStep__actions .form__submit{ width:auto; padding:10px 12px; border-radius:10px; font-size:13px; box-shadow:none; }
+.formStep__actions .form__submit{ width:auto; gap:8px; padding:10px 12px; border-radius:10px; font-size:13px; box-shadow:none; }
 .form__status{ margin:2px 0 0; color:#8a3c35; font-size:13px; line-height:1.45; }
 .formSuccess{ padding:18px 4px 4px; text-align:center; }
 .formSuccess__mark{ display:grid; place-items:center; width:48px; height:48px; margin:0 auto 14px; border:1px solid rgba(95,106,137,.3); border-radius:50%; background:rgba(95,106,137,.1); color:var(--brand); font-size:23px; font-weight:700; }

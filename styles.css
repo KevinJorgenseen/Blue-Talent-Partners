@@ -87,6 +87,7 @@ a:hover{ text-decoration: underline; }
 .mobileNav a.btn, .mobileNav a.btn:hover{ color:#fff; }
 
 .hero{ position:relative; isolation:isolate; overflow:hidden; padding: 56px 0 28px; background: radial-gradient(circle at top left, rgba(31,42,68,.14), transparent 25%), radial-gradient(circle at top right, rgba(95,106,137,.12), transparent 20%), var(--bg); }
+.hero__card{ scroll-margin-top: 108px; }
 .hero__video{ position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; filter:brightness(1.18) saturate(.48); }
 .hero__veil{ position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg, rgba(244,241,236,.72), rgba(244,241,236,.5) 58%, rgba(244,241,236,.3)); }
 .hero__grid{ position:relative; z-index:1; display:grid; grid-template-columns: 1.35fr .95fr; gap: 26px; align-items: start; }

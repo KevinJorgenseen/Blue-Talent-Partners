@@ -18,6 +18,19 @@ if (btn && mobile) {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const heroVideo = document.querySelector('.hero__video');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const saveData = navigator.connection && navigator.connection.saveData;
+
+if (heroVideo && !reduceMotion && !saveData) {
+  const startHeroVideo = () => heroVideo.play().catch(() => {});
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(startHeroVideo, { timeout: 3000 });
+  } else {
+    window.setTimeout(startHeroVideo, 1500);
+  }
+}
+
 const contactForm = document.querySelector('[data-formspree]');
 
 if (contactForm) {

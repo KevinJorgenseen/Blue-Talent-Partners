@@ -68,6 +68,7 @@ a:hover{ text-decoration: underline; }
 .nav{ display:flex; align-items:center; gap: 18px; }
 .nav a{ font-size: 14px; color: var(--muted); font-weight: 500; }
 .nav a:hover{ color: var(--ink); text-decoration: none; }
+.nav a.btn, .nav a.btn:hover{ color:#fff; }
 
 .navToggle{
   display:none;
@@ -82,6 +83,7 @@ a:hover{ text-decoration: underline; }
 .mobileNav{ border-top:1px solid var(--line); background: rgba(255,255,255,.9); }
 .mobileNav__inner{ display:grid; gap: 10px; padding: 14px 0 18px; }
 .mobileNav a{ padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); }
+.mobileNav a.btn, .mobileNav a.btn:hover{ color:#fff; }
 
 .hero{ padding: 56px 0 28px; background: radial-gradient(circle at top left, rgba(31,42,68,.14), transparent 25%), radial-gradient(circle at top right, rgba(95,106,137,.12), transparent 20%); }
 .hero__grid{ display:grid; grid-template-columns: 1.35fr .95fr; gap: 26px; align-items: start; }

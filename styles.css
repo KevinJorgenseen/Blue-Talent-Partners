@@ -180,7 +180,8 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(95,106,137,.65); b
 .formField{ display:block; min-width:0; margin:0; }
 .formField > span{ display:block; margin:0 0 5px; color:var(--muted); font-size:11px; }
 .formField input, .formField select, .formField textarea{ padding:10px; border-radius:8px; background:rgba(255,255,255,.75); font-size:13px; }
-.formField select{ width:100%; min-height:41px; border:1px solid var(--line); font:inherit; color:var(--ink); }
+.formField select{ width:100%; min-height:41px; border:1px solid var(--line); font-family:inherit; font-size:13px; font-weight:400; line-height:1.4; color:var(--ink); }
+.formField select option{ font-family:inherit; font-size:13px; color:var(--ink); }
 .formField--wide{ grid-column:1 / -1; }
 .formStep__actions{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:14px; padding-top:12px; border-top:1px solid var(--line); }
 .formStep__actionsEnd{ display:flex; align-items:center; gap:12px; margin-left:auto; }

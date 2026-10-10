@@ -60,6 +60,12 @@ a:hover{ text-decoration: underline; }
 .brand__name{ font-size: 15px; display: block; }
 .brand__sub{ display: block; font-size: 11px; line-height: 1.2; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin-top: 2px; }
 
+@media (min-width: 761px){
+  .brand__mark{ width:68px; height:68px; }
+  .brand__name{ font-size:17px; }
+  .brand__sub{ font-size:11px; }
+}
+
 .nav{ display:flex; align-items:center; gap: 18px; }
 .nav a{ font-size: 14px; color: var(--muted); font-weight: 500; }
 .nav a:hover{ color: var(--ink); text-decoration: none; }

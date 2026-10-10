@@ -25,4 +25,4 @@ Koble Git-repositoriet til Netlify. Siden er statisk, så la byggekommandoen st�
 
 ## Kontakt og skjema
 
-Firestegsskjemaet ligger i `index.html` og bruker Netlify Forms. Skjemaet blir behandlet når siden er publisert på Netlify. Aktiver skjemainnsendinger for nettstedet i Netlify, og sett opp e-postvarsler for å få beskjed om nye innsendinger.
+Kontaktskjemaet bruker `mailto:` og åpner besøkendes e-postprogram. Det fungerer best for besøkende som har et e-postprogram konfigurert på enheten sin.

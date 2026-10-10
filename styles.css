@@ -55,8 +55,8 @@ a:hover{ text-decoration: underline; }
 }
 .header__inner{ display:flex; align-items:center; justify-content:space-between; padding: 14px 0; gap: 16px; }
 
-.brand{ display:flex; align-items:center; gap: 10px; font-weight: 700; letter-spacing: -.02em; }
-.brand__mark{ display:block; flex:none; width:46px; height:46px; }
+.brand{ display:flex; align-items:center; gap: 12px; font-weight: 700; letter-spacing: -.02em; }
+.brand__mark{ display:block; flex:none; width:58px; height:58px; }
 .brand__name{ font-size: 15px; display: block; }
 .brand__sub{ display: block; font-size: 11px; line-height: 1.2; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; margin-top: 2px; }
 

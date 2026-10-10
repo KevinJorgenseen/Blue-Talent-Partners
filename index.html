@@ -65,7 +65,8 @@
           <div class="card">
             <h2 class="card__title">Lurer du på noe?</h2>
             <p class="card__text">Book en uforpliktende prat.</p>
-            <form class="form" action="mailto:jorgensen.recruitment@gmail.com" method="post" enctype="text/plain">
+            <form name="contact" class="form" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact">
               <label>
                 <span>Navn</span>
                 <input name="navn" autocomplete="name" placeholder="Ditt navn" required>

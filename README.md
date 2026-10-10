@@ -8,6 +8,7 @@ Statisk nettside for Blue Talent Partners. Nettsiden bruker vanlig HTML, CSS og 
 - `styles.css` – layout og visuell stil
 - `script.js` – mobilmeny og automatisk årstall i bunnteksten
 - `Kevin.jpg` – portrettet som vises i «Om»-seksjonen
+- `assets/hero-ocean.mp4` – optimalisert 1080p-variant av Pixabay-klippet brukt bak hero-seksjonen
 
 ## Lokal forhåndsvisning
 
@@ -26,3 +27,5 @@ Koble Git-repositoriet til Netlify. Siden er statisk, så la byggekommandoen st�
 ## Kontakt og skjema
 
 Kontaktskjemaet sender inn via Formspree. Skjemainnsendinger går til e-postadressen som er konfigurert for Formspree-skjemaet.
+
+Hero-videoen er dekorativ og starter ikke automatisk for besøkende som har redusert bevegelse aktivert eller bruker databesparelse.

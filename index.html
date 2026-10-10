@@ -65,21 +65,29 @@
           <div class="card">
             <h2 class="card__title">Lurer du på noe?</h2>
             <p class="card__text">Book en uforpliktende prat.</p>
-            <form class="form" action="mailto:jorgensen.recruitment@gmail.com" method="post" enctype="text/plain">
+            <form class="form" action="https://formspree.io/f/mwlvbnqk" method="POST" data-formspree>
+              <input type="hidden" name="_subject" value="Ny henvendelse fra Blue Talent Partners">
               <label>
                 <span>Navn</span>
                 <input name="navn" autocomplete="name" placeholder="Ditt navn" required>
               </label>
               <label>
                 <span>E-post</span>
-                <input name="epost" type="email" autocomplete="email" placeholder="navn@firma.no" required>
+                <input name="_replyto" type="email" autocomplete="email" placeholder="navn@firma.no" required>
               </label>
               <label>
                 <span>Hva trenger du hjelp med?</span>
                 <textarea name="melding" rows="4" placeholder="F.eks. rekruttering av Fiskehelsebiolog i Tromsø" required></textarea>
               </label>
-              <button class="btn btn--block" type="submit">Send</button>
+              <button class="btn btn--block form__submit" type="submit">Send melding</button>
+              <p class="form__status" role="status" aria-live="polite" hidden></p>
             </form>
+            <div class="formSuccess" tabindex="-1" hidden>
+              <span class="formSuccess__mark" aria-hidden="true">✓</span>
+              <h3>Takk for meldingen!</h3>
+              <p>Jeg har mottatt forespørselen din og tar kontakt så snart jeg kan.</p>
+              <button class="btn btn--ghost formSuccess__reset" type="button">Send en ny melding</button>
+            </div>
           </div>
         </aside>
       </div>

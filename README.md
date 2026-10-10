@@ -1,36 +1,28 @@
-# Clean rekrutteringsbyrå-side (statisk HTML/CSS)
+# Blue Talent Partners
 
-Dette er en liten, rask og «eier-du-alt»-vennlig nettside.
+Statisk nettside for Blue Talent Partners. Nettsiden bruker vanlig HTML, CSS og JavaScript og trenger ingen byggeprosess.
 
-## Innhold
-- `index.html` – alt innhold/struktur
-- `styles.css` – design (soft colors, skarpe kanter)
-- `script.js` – mobilmeny + årstall
-- `assets/` – legg inn bilder her
+## Filer
 
-## Slik redigerer du
-1. **Bytt navn**
-   - Søk etter `Nordic Recruit` i `index.html` og erstatt med ditt byrånavn.
-2. **Bytt e-post/telefon**
-   - Søk etter `hei@dittbyra.no` og `+47 00 00 00 00 00`.
-3. **Tilpass tekst**
-   - Alle seksjoner er tydelig merket: Tjenester, Metode, Om, Kontakt.
-4. **Legg inn portrett**
-   - Legg et bilde i `assets/` og erstatt plassholderen i seksjonen `#om`.
+- `index.html` – innhold, navigasjon og kontaktskjema
+- `styles.css` – layout og visuell stil
+- `script.js` – mobilmeny og automatisk årstall i bunnteksten
+- `Kevin.jpg` – portrettet som vises i «Om»-seksjonen
 
 ## Lokal forhåndsvisning
-Dobbeltklikk `index.html` eller kjør en enkel server:
+
+Kjør fra prosjektmappen:
 
 ```bash
-python -m http.server 8000
+python3 -m http.server 8000
 ```
 
-Åpne: http://localhost:8000
+Åpne deretter http://localhost:8000.
 
-## Hosting (gratis og enkelt)
-- **Netlify**: dra og slipp mappen i Netlify Dashboard.
-- **GitHub Pages**: push repo og aktiver Pages.
+## Publisering med Netlify
 
-## Kontaktformular
-Denne versjonen bruker `mailto:` for enklest mulig eierskap (ingen backend).
-Hvis du vil ha ekte skjema (uten mailto), kan du bruke Netlify Forms eller en liten backend senere.
+Koble Git-repositoriet til Netlify. Siden er statisk, så la byggekommandoen stå tom og bruk prosjektroten (`.`) som publiseringsmappe.
+
+## Kontakt og skjema
+
+Kontaktinformasjonen og skjemaet ligger i `index.html`. Skjemaet bruker foreløpig `mailto:` til `jorgensen.recruitment@gmail.com`, som åpner besøkendes e-postprogram. Når Netlify Forms er konfigurert, oppdater skjemaet der.

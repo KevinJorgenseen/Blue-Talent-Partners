@@ -137,6 +137,7 @@
                 </div>
               </div>
               <p class="form__status" role="status" aria-live="polite" hidden></p>
+              <p class="formPrivacy"><button class="formPrivacy__trigger" type="button" aria-haspopup="dialog" aria-controls="privacyDialog">Personvern</button></p>
             </form>
             <div class="formSuccess" tabindex="-1" hidden>
               <span class="formSuccess__mark" aria-hidden="true">✓</span>
@@ -144,6 +145,11 @@
               <p>Jeg har mottatt forespørselen din og tar kontakt så snart jeg kan.</p>
               <button class="btn btn--ghost formSuccess__reset" type="button">Send en ny melding</button>
             </div>
+            <dialog class="privacyDialog" id="privacyDialog" aria-labelledby="privacyDialogTitle">
+              <h2 id="privacyDialogTitle">Personvern</h2>
+              <p>Blue Talent Partners behandler personopplysninger som sendes inn via kontaktskjema eller e-post for å kunne besvare henvendelser og levere våre tjenester. Opplysningene deles ikke med tredjeparter uten samtykke eller lovlig grunnlag, og opplysningene lagres aldri lengre enn seks (6) måneder.</p>
+              <button class="btn btn--sm privacyDialog__close" type="button" data-privacy-close>Lukk</button>
+            </dialog>
           </div>
         </aside>
       </div>
@@ -273,7 +279,6 @@
     <div class="container footer__inner">
       <p>© <span id="year"></span> Jørgensen. Alle rettigheter.</p>
       <div class="footer__links">
-        <a href="#">Personvern</a>
         <a href="#">Cookies</a>
       </div>
     </div>

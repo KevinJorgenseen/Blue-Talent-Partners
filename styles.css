@@ -88,6 +88,7 @@ a:hover{ text-decoration: underline; }
 
 .hero{ position:relative; isolation:isolate; overflow:hidden; padding: 56px 0 28px; background: radial-gradient(circle at top left, rgba(31,42,68,.14), transparent 25%), radial-gradient(circle at top right, rgba(95,106,137,.12), transparent 20%), var(--bg); }
 .hero__card{ scroll-margin-top: 108px; }
+.section#om{ scroll-margin-top: 108px; }
 .hero__video{ position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; filter:brightness(1.18) saturate(.48); }
 .hero__veil{ position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg, rgba(244,241,236,.72), rgba(244,241,236,.5) 58%, rgba(244,241,236,.3)); }
 .hero__grid{ position:relative; z-index:1; display:grid; grid-template-columns: 1.35fr .95fr; gap: 26px; align-items: center; }
@@ -194,6 +195,15 @@ input:focus, textarea:focus, select:focus{ border-color: rgba(95,106,137,.65); b
 .form__submit:disabled{ cursor:wait; opacity:.72; }
 .formStep__actions .form__submit{ width:auto; gap:8px; padding:10px 12px; border-radius:10px; font-size:13px; box-shadow:none; }
 .form__status{ margin:2px 0 0; color:#8a3c35; font-size:13px; line-height:1.45; }
+.formPrivacy{ margin:8px 0 0; text-align:center; }
+.formPrivacy__trigger{ padding:0; border:0; background:transparent; color:var(--brand2); font:inherit; font-size:12px; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.formPrivacy__trigger:hover{ color:var(--ink); }
+.formPrivacy__trigger:focus-visible, .privacyDialog__close:focus-visible{ outline:2px solid var(--brand2); outline-offset:3px; }
+.privacyDialog{ width:min(480px, calc(100% - 32px)); max-width:none; padding:20px; border:1px solid var(--line); border-radius:var(--radius); background:var(--bg); color:var(--ink); box-shadow:var(--shadow); font-family:inherit; }
+.privacyDialog::backdrop{ background:rgba(31,42,68,.48); backdrop-filter:blur(2px); }
+.privacyDialog h2{ margin:0 0 10px; font-size:20px; }
+.privacyDialog p{ margin:0 0 18px; color:var(--muted); font-size:14px; line-height:1.6; }
+.privacyDialog__close{ cursor:pointer; box-shadow:none; }
 .formSuccess{ padding:18px 4px 4px; text-align:center; }
 .formSuccess__mark{ display:grid; place-items:center; width:48px; height:48px; margin:0 auto 14px; border:1px solid rgba(95,106,137,.3); border-radius:50%; background:rgba(95,106,137,.1); color:var(--brand); font-size:23px; font-weight:700; }
 .formSuccess h3{ margin:0 0 8px; font-size:20px; }

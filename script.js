@@ -18,6 +18,15 @@ if (btn && mobile) {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const privacyDialog = document.getElementById('privacyDialog');
+const privacyTrigger = document.querySelector('.formPrivacy__trigger');
+const privacyClose = document.querySelector('[data-privacy-close]');
+
+if (privacyDialog && privacyTrigger && privacyClose) {
+  privacyTrigger.addEventListener('click', () => privacyDialog.showModal());
+  privacyClose.addEventListener('click', () => privacyDialog.close());
+}
+
 const heroVideo = document.querySelector('.hero__video');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const saveData = navigator.connection && navigator.connection.saveData;

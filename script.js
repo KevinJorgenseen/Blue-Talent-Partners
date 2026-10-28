@@ -43,18 +43,29 @@ const newsletterDialog = document.getElementById('newsletterDialog');
 const newsletterOpenButtons = document.querySelectorAll('[data-newsletter-open]');
 const newsletterCloseButton = document.querySelector('[data-newsletter-close]');
 const newsletterForm = document.querySelector('.newsletterForm');
+const newsletterThankYou = document.querySelector('.newsletterThankYou');
 
 if (newsletterDialog) {
+  const showNewsletterDialog = () => {
+    if (newsletterDialog.open) return;
+    newsletterDialog.showModal();
+  };
+
   newsletterOpenButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      newsletterDialog.showModal();
-    });
+    button.addEventListener('click', showNewsletterDialog);
   });
 
   if (newsletterCloseButton) {
     newsletterCloseButton.addEventListener('click', () => {
       newsletterDialog.close();
     });
+  }
+
+  const shouldAutoOpen = !sessionStorage.getItem('bt-newsletter-shown');
+  if (shouldAutoOpen) {
+    setTimeout(() => {
+      showNewsletterDialog();
+    }, 1200);
   }
 
   if (newsletterForm) {
@@ -89,16 +100,16 @@ if (newsletterDialog) {
           throw new Error('Newsletter submission failed');
         }
 
-        newsletterForm.reset();
+        sessionStorage.setItem('bt-newsletter-shown', 'true');
+        newsletterForm.hidden = true;
 
-        if (newsletterStatus) {
-          newsletterStatus.textContent = 'Takk! Du er registrert for Blue Talent Summit 2027.';
-          newsletterStatus.hidden = false;
+        if (newsletterThankYou) {
+          newsletterThankYou.hidden = false;
         }
 
         setTimeout(() => {
           newsletterDialog.close();
-        }, 1200);
+        }, 1800);
       } catch {
         if (newsletterStatus) {
           newsletterStatus.textContent = 'Noe gikk galt. Prøv igjen, eller kontakt oss på bluetalentpartners@outlook.com.';

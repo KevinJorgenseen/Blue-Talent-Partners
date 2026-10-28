@@ -288,7 +288,7 @@
       <button type="button" class="newsletterDialog__close" data-newsletter-close aria-label="Lukk">×</button>
     </div>
 
-    <form class="newsletterForm" action="https://formspree.io/f/mwlvbnqk" method="POST">
+    <form class="newsletterForm" action="https://formspree.io/f/xvkkrjwq" method="POST">
       <input type="hidden" name="_subject" value="Blue Talent Summit 2027 - newsletter signup" />
       <input type="hidden" name="source" value="Blue Talent Summit 2027" />
       <input type="hidden" name="_cc" value="bluetalentpartners@outlook.com" />
@@ -305,9 +305,20 @@
         <input type="email" name="email" autocomplete="email" placeholder="navn@eksempel.no" required />
       </label>
 
+      <label class="newsletterConsent">
+        <input type="checkbox" name="consent" required />
+        <span>Jeg godkjenner at Blue Talent kan kontakte meg om Blue Talent Summit 2027.</span>
+      </label>
+
       <button class="btn btn--block" type="submit">Registrer meg</button>
       <p class="newsletterForm__status" role="status" aria-live="polite" hidden></p>
     </form>
+
+    <div class="newsletterThankYou" hidden>
+      <div class="newsletterThankYou__mark" aria-hidden="true">✓</div>
+      <h3>Takk for at du registrerte deg!</h3>
+      <p>Du er nå påmeldt Blue Talent Summit 2027.</p>
+    </div>
   </dialog>
 
   <script src="script.js"></script>

@@ -34,7 +34,7 @@
         <a href="#tjenester">Tjenester</a>
         <a href="#om">Om</a>
         <a href="#metode">Slik jobber jeg</a>
-        <a href="#kontaktskjema" class="btn btn--sm">Ta kontakt</a>
+        <button type="button" class="btn btn--sm btn--newsletter" data-newsletter-open>Blue Talent Summit 2027</button>
       </nav>
 
       <button class="navToggle" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobileNav">
@@ -47,7 +47,7 @@
         <a href="#tjenester">Tjenester</a>
         <a href="#om">Om</a>
         <a href="#metode">Slik jobber jeg</a>
-        <a href="#kontaktskjema" class="btn">Ta kontakt</a>
+        <button type="button" class="btn btn--newsletter mobileNewsletterButton" data-newsletter-open>Blue Talent Summit 2027</button>
       </div>
     </div>
   </header>
@@ -89,9 +89,9 @@
                 <p class="formStep__hint">Velg det som passer best – det kan justeres senere.</p>
                 <div class="formChoices">
                   <label class="formChoice"><input type="radio" name="behov" value="Fast ansettelse" data-required><span><strong>Fast ansettelse</strong><small>Riktig person til en fast stilling.</small></span></label>
-                  <label class="formChoice"><input type="radio" name="behov" value="Leder- og nøkkelrolle" data-required><span><strong>Leder- og nøkkelrolle</strong><small>Diskré søk etter ledere og spesialister.</small></span></label>
-                  <label class="formChoice"><input type="radio" name="behov" value="Midlertidig eller prosjekt" data-required><span><strong>Midlertidig / prosjekt</strong><small>Behov for kapasitet for en periode eller et prosjekt.</small></span></label>
-                  <label class="formChoice"><input type="radio" name="behov" value="Usikker - vil gjerne sparre" data-required><span><strong>Usikker – vil gjerne sparre</strong><small>Vi finner ut av behovet sammen.</small></span></label>
+                  <label class="formChoice"><input type="radio" name="behov" value="Leder- og nøkkelrolle" data-required><span><strong>Leder- og nøkkelrolle</strong><small>Diskret søk etter ledere og nøkkelroller.</small></span></label>
+                  <label class="formChoice"><input type="radio" name="behov" value="Midlertidig eller prosjekt" data-required><span><strong>Midlertidig / prosjekt</strong><small>Behov for kapasitet eller kortsiktig støtte.</small></span></label>
+                  <label class="formChoice"><input type="radio" name="behov" value="Usikker - vil gjerne sparre" data-required><span><strong>Usikker – vil gjerne sparre</strong><small>Vi finner sammen løsningen.</small></span></label>
                 </div>
               </fieldset>
 
@@ -102,8 +102,8 @@
                   <label class="formField"><span>Rolle eller stillingstittel</span><input name="rolle" placeholder="F.eks. Fiskehelsebiolog"></label>
                   <label class="formField"><span>Fagområde</span><input name="fagomrade" placeholder="F.eks. fiskehelse"></label>
                   <label class="formField"><span>Sted</span><input name="sted" placeholder="By eller region"></label>
-                  <label class="formField"><span>Antall stillinger</span><select name="antall_stillinger"><option value="">Velg antall</option><option>1</option><option>2–3</option><option>4–10</option><option>Flere enn 10</option></select></label>
-                  <label class="formField"><span>Ønsket oppstart</span><select name="oppstart"><option value="">Velg tidspunkt</option><option>Så snart som mulig</option><option>Innen 3 måneder</option><option>Om 3–6 måneder</option><option>Utforsker foreløpig</option></select></label>
+                  <label class="formField"><span>Antall stillinger</span><select name="antall_stillinger"><option value="">Velg antall</option><option>1</option><option>2–3</option><option>4–5</option><option>Flere</option></select></label>
+                  <label class="formField"><span>Ønsket oppstart</span><select name="oppstart"><option value="">Velg tidspunkt</option><option>Så snart som mulig</option><option>Innen 3 måneder</option><option>Innen 6 måneder</option><option>Usikker</option></select></label>
                 </div>
               </fieldset>
 
@@ -113,7 +113,7 @@
                 <div class="formFieldsGrid">
                   <label class="formField"><span>Virksomhet</span><input name="virksomhet" autocomplete="organization" placeholder="Firmanavn AS"></label>
                   <label class="formField"><span>Bransje</span><input name="bransje" placeholder="F.eks. havbruk eller sjømat"></label>
-                  <label class="formField"><span>Antall ansatte</span><select name="ansatte"><option value="">Velg størrelse</option><option>1–10</option><option>11–50</option><option>51–200</option><option>Over 200</option></select></label>
+                  <label class="formField"><span>Antall ansatte</span><select name="ansatte"><option value="">Velg størrelse</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select></label>
                   <label class="formField formField--wide"><span>Hva ønsker dere hjelp med?</span><textarea name="melding" rows="3" placeholder="Beskriv gjerne behovet eller utfordringen kort."></textarea></label>
                 </div>
               </fieldset>
@@ -125,7 +125,7 @@
                   <label class="formField"><span>Navn *</span><input name="navn" autocomplete="name" placeholder="Fornavn Etternavn" data-required></label>
                   <label class="formField"><span>E-post *</span><input name="_replyto" type="email" autocomplete="email" placeholder="navn@firma.no" data-required></label>
                   <label class="formField"><span>Telefon (valgfritt)</span><input name="telefon" type="tel" autocomplete="tel" placeholder="+47 000 00 000"></label>
-                  <label class="formField"><span>Foretrukket kontaktmåte</span><select name="kontaktmate"><option value="">Velg kontaktmåte</option><option>E-post</option><option>Telefon</option><option>Teams / video</option></select></label>
+                  <label class="formField"><span>Foretrukket kontaktmåte</span><select name="kontaktmate"><option value="">Velg kontaktmåte</option><option>E-post</option><option>Telefon</option><option>Begge</option></select></label>
                 </div>
               </fieldset>
 
@@ -147,7 +147,7 @@
             </div>
             <dialog class="privacyDialog" id="privacyDialog" aria-labelledby="privacyDialogTitle">
               <h2 id="privacyDialogTitle">Personvern</h2>
-              <p>Blue Talent behandler personopplysninger som sendes inn via kontaktskjema eller e-post for å kunne besvare henvendelser og levere våre tjenester. Opplysningene deles ikke med tredjeparter uten samtykke eller lovlig grunnlag, og opplysningene lagres aldri lengre enn seks (6) måneder.</p>
+              <p>Blue Talent behandler personopplysninger som sendes inn via kontaktskjema eller e-post for å kunne besvare henvendelser og levere våre tjenester. Opplysningene deles ikke med tredjeparter, med mindre det er nødvendig for å oppfylle en avtale eller etter lovpålagt krav.</p>
               <button class="btn btn--sm privacyDialog__close" type="button" data-privacy-close>Lukk</button>
             </dialog>
           </div>
@@ -166,7 +166,6 @@
             <p>Komplett rekrutteringsprosess fra behovsavklaring til signert arbeidsavtale. Jeg håndterer alt fra stillingsutforming og annonsering til screening, intervjuer og referansesjekker.</p>
             <ul class="list">
               <li>Dere eier kandidatdataene og prosessen gjennom deres eget rekrutteringssystem</li>
-    
             </ul>
           </div>
           <div class="panel">
@@ -196,14 +195,14 @@
         <div class="twoCol">
           <div>
             <h2>Om Blue Talent</h2>
-            <p class="lead">Å finne de riktige folkene trenger ikke å koste skjorta. Blue Talent er et spesialisert rekrutteringsbyrå for sjømatnæringen som utfordrer de etablerte aktørene med bransjeforståelse, et relevant nettverk og en mer personlig tilnærming.</p>
-            <p>Rekruttering handler ikke om å vise dere flest mulig CV-er. Det handler om å finne den rette personen. Jeg jobber tett med hver kunde for å forstå virksomheten, rollen og menneskene som skal lykkes i den. Resultatet er en mer treffsikker prosess og bedre ansettelser.</p>
-            <p>Jeg er en rekrutteringsrådgiver med erfaring fra de største selskapene i havbruksnæringen. Gjennom roller i Lerøy Seafood Group og ScaleAQ har jeg jobbet med rekruttering og employer branding på tvers av ulike fagområder og selskaper. Dette har resultert i:</p>
-              <ul class="list">
-                <li>En ansettelsesprosent på <strong>97% i 2025</strong> og <strong>93% i 2026</strong>.</li>
-                <li>Økt søkertall for ScaleAQ Group med <strong>over 200%</strong> i 2025 sammenlignet med 2024.</li>
-                <li>ScaleAQ Group ble kåret til <strong>næringens 4. mest attraktive arbeidsgiver i 2026</strong>, etter å aldri ha vært på listen.</li>
-              </ul>
+            <p class="lead">Å finne de riktige folkene trenger ikke å koste skjorta. Blue Talent er et spesialisert rekrutteringsbyrå for sjømatnæringen som utfordrer de etablerte aktørene gjennom smartere prosesser, tydeligere mål og tett oppfølging.</p>
+            <p>Rekruttering handler ikke om å vise dere flest mulig CV-er. Det handler om å finne den rette personen. Jeg jobber tett med hver kunde for å forstå virksomheten, rollen og menneskene bak den.</p>
+            <p>Jeg er en rekrutteringsrådgiver med erfaring fra de største selskapene i havbruksnæringen. Gjennom roller i Lerøy Seafood Group og ScaleAQ har jeg jobbet med rekruttering og etablering av komplekse ansettelser.</p>
+            <ul class="list">
+              <li>En ansettelsesprosent på <strong>97% i 2025</strong> og <strong>93% i 2026</strong>.</li>
+              <li>Økt søkertall for ScaleAQ Group med <strong>over 200%</strong> i 2025 sammenlignet med 2024.</li>
+              <li>ScaleAQ Group ble kåret til <strong>næringens 4. mest attraktive arbeidsgiver i 2026</strong>, etter å aldri ha vært på listen.</li>
+            </ul>
             <p>Jeg tror på struktur, transparens og tett samarbeid. Gode ansettelser handler ikke bare om kompetanse, men om å finne mennesker som passer både rollen, teamet og virksomheten.</p>
             <p class="micro">Ingen skjulte kostnader.<br>Ingen etableringsgebyrer.<br>Ingen prosent av årslønn.<br><br>Full transparens, hele veien.</p>
           </div>
@@ -222,12 +221,11 @@
         </div>
 
         <div class="steps">
-          <div class="step"><span class="step__no">01</span><h3>Behov & rolleforståelse</h3><p>Jeg starter med å forstå virksomheten, rollen og kompetansen som trengs. Et godt grunnlag gir bedre kandidater og tryggere beslutninger.</p></div>
-          <div class="step"><span class="step__no">02</span><h3>Marked & kandidatkartlegging</h3><p>Gjennom målrettet search og relevant synlighet identifiserer jeg aktuelle kandidater. Dere får løpende status og full innsikt gjennom hele prosessen.</p></div>
-          <div class="step"><span class="step__no">03</span><h3>Vurdering og seleksjon</h3><p>Strukturerte intervjuer, tydelige vurderingskriterier og grundige referansesjekker sikrer et godt beslutningsgrunnlag og en profesjonell kandidatopplevelse.</p></div>
-          <div class="step"><span class="step__no">04</span><h3>Beslutning og oppstart</h3><p>Jeg følger opp både kunde og kandidat før og etter ansettelse. Målet er ikke bare å fylle en stilling, men å sikre en løsning som fungerer over tid.</p></div>
+          <div class="step"><span class="step__no">01</span><h3>Behov & rolleforståelse</h3><p>Jeg starter med å forstå virksomheten, rollen og kompetansen som trengs. Et godt grunnlag gir bedre beslutninger.</p></div>
+          <div class="step"><span class="step__no">02</span><h3>Marked & kandidatkartlegging</h3><p>Gjennom målrettet search og relevant synlighet identifiserer jeg aktuelle kandidater. Dere får kun relevante personer.</p></div>
+          <div class="step"><span class="step__no">03</span><h3>Vurdering og seleksjon</h3><p>Strukturerte intervjuer, tydelige vurderingskriterier og grundige referansesjekker sikrer et godt beslutningsgrunnlag.</p></div>
+          <div class="step"><span class="step__no">04</span><h3>Beslutning og oppstart</h3><p>Jeg følger opp både kunde og kandidat før og etter ansettelse. Målet er ikke bare å fylle en stilling, men å bygge riktig forløp.</p></div>
         </div>
-
       </div>
     </section>
 
@@ -254,19 +252,19 @@
             <h3>Ofte stilte spørsmål</h3>
             <details>
               <summary>Hva koster en rekruttering?</summary>
-              <p>Jeg opererer med fastpris på alle oppdrag. Prisen avtales på forhånd og påvirkes ikke av kandidatens lønn eller bonusordninger. Du vet derfor alltid hva rekrutteringen kommer til å koste.</p>
+              <p>Jeg opererer med fastpris på alle oppdrag. Prisen avtales på forhånd og påvirkes ikke av kandidatens lønn eller bonusordninger.</p>
             </details>
             <details>
               <summary>Hvorfor bruke ekstern rekrutterer?</summary>
-              <p>Rekruttering krever tid, struktur og tilgang til kandidater som ofte ikke er aktivt på jobbjakt. Jeg bidrar med kapasitet, metode og målrettet search slik at både ledere og HR i større grad kan fokusere på den daglige driften.</p>
+              <p>Rekruttering krever tid, struktur og tilgang til kandidater som ofte ikke er aktivt på jobbjakt. Jeg bidrar med kapasitet, metode og målrettet search.</p>
             </details>
             <details>
               <summary>Jobber du kun innen havbruksnæringen?</summary>
-              <p>Ja, hovedfokuset mitt er sjømat- og havbruksnæringen. Med erfaring fra både oppdrettsnæringen og leverandørindustrien forstår jeg utfordringene, rollene og kompetansebehovene i bransjen. Det gjør meg i stand til å jobbe mer målrettet og treffsikkert.</p>
+              <p>Ja, hovedfokuset mitt er sjømat- og havbruksnæringen. Med erfaring fra både oppdrettsnæringen og leverandørindustrien forstår jeg utfordringene.</p>
             </details>
             <details>
               <summary>Hvor lang tid tar en rekrutteringsprosess?</summary>
-              <p>De fleste prosesser gjennomføres på 4-8 uker, avhengig av rolle, marked og tilgjengelige kandidater. Dere får tydelige milepæler og løpende statusoppdateringer gjennom hele prosessen.</p>
+              <p>De fleste prosesser gjennomføres på 4-8 uker, avhengig av rolle, marked og tilgjengelige kandidater. Dere får tydelige milepæler og statusoppdateringer.</p>
             </details>
           </div>
         </div>
@@ -283,6 +281,34 @@
       </div>
     </div>
   </footer>
+
+  <dialog id="newsletterDialog" class="newsletterDialog" aria-labelledby="newsletterDialogTitle">
+    <div class="newsletterDialog__header">
+      <h2 id="newsletterDialogTitle">Blue Talent Summit 2027</h2>
+      <button type="button" class="newsletterDialog__close" data-newsletter-close aria-label="Lukk">×</button>
+    </div>
+
+    <form class="newsletterForm" action="https://formspree.io/f/mwlvbnqk" method="POST">
+      <input type="hidden" name="_subject" value="Blue Talent Summit 2027 - newsletter signup" />
+      <input type="hidden" name="source" value="Blue Talent Summit 2027" />
+      <input type="hidden" name="_cc" value="bluetalentpartners@outlook.com" />
+
+      <p class="newsletterForm__lead">Sign up to get news, updates, and early access for Blue Talent Summit 2027.</p>
+
+      <label class="newsletterField">
+        <span>Navn</span>
+        <input type="text" name="navn" autocomplete="name" placeholder="Ditt navn" required />
+      </label>
+
+      <label class="newsletterField">
+        <span>E-post</span>
+        <input type="email" name="email" autocomplete="email" placeholder="navn@eksempel.no" required />
+      </label>
+
+      <button class="btn btn--block" type="submit">Registrer meg</button>
+      <p class="newsletterForm__status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

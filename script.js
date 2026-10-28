@@ -9,6 +9,7 @@ if (btn && mobile) {
     mobile.hidden = expanded;
   });
 
+  // Close menu when clicking a link
   mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     btn.setAttribute('aria-expanded', 'false');
     mobile.hidden = true;
@@ -36,92 +37,6 @@ if (heroVideo && !reduceMotion && !saveData) {
     window.requestIdleCallback(startHeroVideo, { timeout: 3000 });
   } else {
     window.setTimeout(startHeroVideo, 1500);
-  }
-}
-
-const newsletterDialog = document.getElementById('newsletterDialog');
-const newsletterOpenButtons = document.querySelectorAll('[data-newsletter-open]');
-const newsletterCloseButton = document.querySelector('[data-newsletter-close]');
-const newsletterForm = document.querySelector('.newsletterForm');
-const newsletterThankYou = document.querySelector('.newsletterThankYou');
-
-if (newsletterDialog) {
-  const showNewsletterDialog = () => {
-    if (newsletterDialog.open) return;
-    newsletterDialog.showModal();
-  };
-
-  newsletterOpenButtons.forEach((button) => {
-    button.addEventListener('click', showNewsletterDialog);
-  });
-
-  if (newsletterCloseButton) {
-    newsletterCloseButton.addEventListener('click', () => {
-      newsletterDialog.close();
-    });
-  }
-
-  const shouldAutoOpen = !sessionStorage.getItem('bt-newsletter-shown');
-  if (shouldAutoOpen) {
-    setTimeout(() => {
-      showNewsletterDialog();
-    }, 1200);
-  }
-
-  if (newsletterForm) {
-    const newsletterStatus = newsletterForm.querySelector('.newsletterForm__status');
-
-    newsletterForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      if (!newsletterForm.reportValidity()) {
-        return;
-      }
-
-      const submitButton = newsletterForm.querySelector('button[type="submit"]');
-
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sender…';
-      }
-
-      if (newsletterStatus) {
-        newsletterStatus.hidden = true;
-      }
-
-      try {
-        const response = await fetch(newsletterForm.action, {
-          method: 'POST',
-          body: new FormData(newsletterForm),
-          headers: { Accept: 'application/json' }
-        });
-
-        if (!response.ok) {
-          throw new Error('Newsletter submission failed');
-        }
-
-        sessionStorage.setItem('bt-newsletter-shown', 'true');
-        newsletterForm.hidden = true;
-
-        if (newsletterThankYou) {
-          newsletterThankYou.hidden = false;
-        }
-
-        setTimeout(() => {
-          newsletterDialog.close();
-        }, 1800);
-      } catch {
-        if (newsletterStatus) {
-          newsletterStatus.textContent = 'Noe gikk galt. Prøv igjen, eller kontakt oss på bluetalentpartners@outlook.com.';
-          newsletterStatus.hidden = false;
-        }
-      } finally {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = 'Registrer meg';
-        }
-      }
-    });
   }
 }
 
